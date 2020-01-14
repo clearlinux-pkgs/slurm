@@ -1,0 +1,12 @@
+19.05.5.1
+Linux-PAM-dev
+dejagnu
+expect
+glib-dev
+lua-dev
+mariadb-dev
+ncurses-dev
+pkgconfig(ncurses)
+pkgconfig(ncursesw)
+pkgconfig(zlib)
+tcl

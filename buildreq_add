@@ -1,0 +1,18 @@
+# This file contains additional build requirements that did not get
+# picked up automatically. One name per line, no whitespace.
+readline-dev
+hdf5-dev
+hwloc-dev
+gtk+-dev
+curl-dev
+pmix-dev
+rrdtool-dev
+systemd-dev
+freeipmi-dev
+numactl-dev
+json-c-dev
+munge-dev
+nghttp2-dev
+systemd-dev
+openssl-dev
+lz4-dev

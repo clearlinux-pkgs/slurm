@@ -1,0 +1,6 @@
+slurm.conf -m 0644 -p /usr/share/defaults/slurm/slurm.conf
+slurmdbd.conf -m 0644 -p /usr/share/defaults/slurm/slurmdbd.conf
+cgroup.conf -m 0644 -p /usr/share/defaults/slurm/cgroup.conf
+slurm.desktop /usr/share/applications/
+slurm-dirs.conf /usr/lib/tmpfiles.d/slurm-dirs.conf
+slurm-logrotate -m 0644 -p /usr/share/defaults/slurm/logrotate.d/slurm

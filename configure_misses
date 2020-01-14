@@ -1,0 +1,43 @@
+Configure miss: whether to include rpath in build
+Configure miss: library containing kstat_open
+Configure miss: socket.h usability
+Configure miss: socket.h presence
+Configure miss: socket.h
+Configure miss: sysint.h usability
+Configure miss: sysint.h presence
+Configure miss: sysint.h
+Configure miss: sys/systemcfg.h usability
+Configure miss: sys/systemcfg.h presence
+Configure miss: sys/systemcfg.h
+Configure miss: sys/dr.h usability
+Configure miss: sys/dr.h presence
+Configure miss: sys/dr.h
+Configure miss: pam/pam_appl.h usability
+Configure miss: pam/pam_appl.h presence
+Configure miss: pam/pam_appl.h
+Configure miss: kstat.h usability
+Configure miss: kstat.h presence
+Configure miss: kstat.h
+Configure miss: whether sys/types.h defines makedev
+Configure miss: library containing dlopen... checking for dlopen in -l
+Configure miss: ptrace64
+Configure miss: whether sbatch --get-user-env option should load .login
+Configure miss: whether strerror_r returns char *
+Configure miss: sysctlbyname
+Configure miss: whether hstrerror is declared
+Configure miss: whether sys_siglist is declared
+Configure miss: System dimensions
+Configure miss: nvml.h usability
+Configure miss: nvml.h presence
+Configure miss: nvml.h
+Configure miss: nvmlInit in -lnvidia-ml
+Configure miss: whether or not developer options are enabled
+Configure miss: whether debugging is enabled
+Configure miss: whether memory leak debugging is enabled
+Configure miss: whether to enable slurmd operation on a front-end
+Configure miss: whether debugger partial attach enabled
+Configure miss: whether salloc should kill child processes at job termination
+Configure miss: whether to disable salloc execution in the background
+Configure miss: whether man2html is available... checking for man2html
+Configure miss: whether to enable multiple-slurmd support
+Configure miss: whether deprecated options are enabled

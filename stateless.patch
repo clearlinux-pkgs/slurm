@@ -1,0 +1,36 @@
+--- a/src/common/read_config.c-org	2019-12-02 15:48:10.000000000 -0800
++++ b/src/common/read_config.c	2019-12-07 10:56:39.618062367 -0800
+@@ -3222,8 +3222,15 @@
+ 
+ 	if (name == NULL) {
+ 		name = getenv("SLURM_CONF");
+-		if (name == NULL)
++		if (name == NULL) {
++			struct stat stat_buf;
+ 			name = default_slurm_config_file;
++			/* default_slurm_config_file /etc/slurm/slurm.conf may not exist.
++			 * If it does, use it, if not, use the "stateless" file */
++			if (stat(name, &stat_buf) == -1) {
++				name = "/usr/share/defaults/slurm/slurm.conf";
++			}
++		}
+ 	}
+ 	if (conf_initialized)
+ 		error("the conf_hashtbl is already inited");
+@@ -5822,8 +5829,15 @@
+ 	char *val = getenv("SLURM_CONF");
+ 	char *rc = NULL, *slash;
+ 
+-	if (!val)
++	if (!val) {
++		struct stat stat_buf;
+ 		val = default_slurm_config_file;
++		/* default_slurm_config_file /etc/slurm/slurm.conf may not exist.
++		 * If it does, use it, if not, use the "stateless" file */
++		if (stat(val, &stat_buf) == -1) {
++			val = "/usr/share/defaults/slurm/slurm.conf";
++		}
++	}
+ 
+ 	/* Replace file name on end of path */
+ 	rc = xstrdup(val);

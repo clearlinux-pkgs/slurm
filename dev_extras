@@ -1,0 +1,2 @@
+/usr/lib64/slurm/src/sattach/sattach.wrapper.c
+/usr/lib64/slurm/src/srun/srun.wrapper.c

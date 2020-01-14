@@ -1,0 +1,56 @@
+--- a/etc/slurmctld.service.in-org	2019-11-14 13:43:23.000000000 -0800
++++ b/etc/slurmctld.service.in	2019-12-07 07:26:46.131434507 -0800
+@@ -1,14 +1,14 @@
+ [Unit]
+ Description=Slurm controller daemon
+ After=network.target munge.service
+-ConditionPathExists=@sysconfdir@/slurm.conf
+ 
+ [Service]
+ Type=forking
++User=root
+ EnvironmentFile=-/etc/sysconfig/slurmctld
+ ExecStart=@sbindir@/slurmctld $SLURMCTLD_OPTIONS
+ ExecReload=/bin/kill -HUP $MAINPID
+-PIDFile=/var/run/slurmctld.pid
++PIDFile=/run/slurm/slurmctld.pid
+ LimitNOFILE=65536
+ @SYSTEMD_TASKSMAX_OPTION@
+ 
+--- a/etc/slurmdbd.service.in-org	2019-11-14 13:43:23.000000000 -0800
++++ b/etc/slurmdbd.service.in	2019-12-07 07:26:32.771435027 -0800
+@@ -1,14 +1,13 @@
+ [Unit]
+ Description=Slurm DBD accounting daemon
+ After=network.target munge.service
+-ConditionPathExists=@sysconfdir@/slurmdbd.conf
+ 
+ [Service]
+ Type=forking
+ EnvironmentFile=-/etc/sysconfig/slurmdbd
+ ExecStart=@sbindir@/slurmdbd $SLURMDBD_OPTIONS
+ ExecReload=/bin/kill -HUP $MAINPID
+-PIDFile=/var/run/slurmdbd.pid
++PIDFile=/run/slurm/slurmdbd.pid
+ LimitNOFILE=65536
+ @SYSTEMD_TASKSMAX_OPTION@
+ 
+--- a/etc/slurmd.service.in-org	2019-11-14 13:43:23.000000000 -0800
++++ b/etc/slurmd.service.in	2019-12-07 07:27:00.555433944 -0800
+@@ -1,14 +1,14 @@
+ [Unit]
+ Description=Slurm node daemon
+ After=munge.service network.target remote-fs.target
+-ConditionPathExists=@sysconfdir@/slurm.conf
+ 
+ [Service]
+ Type=forking
++User=root
+ EnvironmentFile=-/etc/sysconfig/slurmd
+ ExecStart=@sbindir@/slurmd $SLURMD_OPTIONS
+ ExecReload=/bin/kill -HUP $MAINPID
+-PIDFile=/var/run/slurmd.pid
++PIDFile=/run/slurm/slurmd.pid
+ KillMode=process
+ LimitNOFILE=131072
+ LimitMEMLOCK=infinity

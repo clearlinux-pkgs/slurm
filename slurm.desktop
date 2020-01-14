@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Exec=sview
+Name=Slurm sview
+GenericName=Slurm GUI to manage slurm state
+Terminal=false
+Categories=Science;ParallelComputing;ComputerScience;
+Icon=slurm_logo
