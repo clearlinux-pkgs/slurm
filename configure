@@ -2,8 +2,7 @@
 --enable-shared
 --enable-x11
 --disable-static
---disable-developer
---disable-debug
+--with-pmix=/usr
 --without-rpath
 --enable-pam
 --with-pam_dir=/usr/lib64/security

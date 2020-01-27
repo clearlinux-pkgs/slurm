@@ -14,5 +14,6 @@ json-c-dev
 munge-dev
 nghttp2-dev
 systemd-dev
+lua-dev
 openssl-dev
 lz4-dev

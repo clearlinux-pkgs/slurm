@@ -32,7 +32,6 @@ Configure miss: nvml.h presence
 Configure miss: nvml.h
 Configure miss: nvmlInit in -lnvidia-ml
 Configure miss: whether or not developer options are enabled
-Configure miss: whether debugging is enabled
 Configure miss: whether memory leak debugging is enabled
 Configure miss: whether to enable slurmd operation on a front-end
 Configure miss: whether debugger partial attach enabled
