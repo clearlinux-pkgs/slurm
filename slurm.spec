@@ -4,7 +4,7 @@
 #
 Name     : slurm
 Version  : 19.05.5.1
-Release  : 5
+Release  : 6
 URL      : https://github.com/SchedMD/slurm/archive/slurm-19-05-5-1.tar.gz
 Source0  : https://github.com/SchedMD/slurm/archive/slurm-19-05-5-1.tar.gz
 Source1  : slurm.conf
@@ -160,18 +160,18 @@ cd %{_builddir}/slurm-slurm-19-05-5-1
 
 %build
 ## build_prepend content
-export CFLAGS="$CFLAGS  -Wl,-z,lazy"
-export CXXFLAGS="$CXXFLAGS -Wl,-z,lazy"
+export CFLAGS="$CFLAGS  -Wl,-z,lazy -fcommon"
+export CXXFLAGS="$CXXFLAGS -Wl,-z,lazy -fcommon"
 ## build_prepend end
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1580236947
+export SOURCE_DATE_EPOCH=1589816277
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
-export FCFLAGS="$CFLAGS -fno-lto "
-export FFLAGS="$CFLAGS -fno-lto "
+export FCFLAGS="$FFLAGS -fno-lto "
+export FFLAGS="$FFLAGS -fno-lto "
 export CXXFLAGS="$CXXFLAGS -fno-lto "
 %reconfigure --disable-static --sysconfdir=/etc/slurm \
 --enable-shared \
@@ -191,7 +191,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1580236947
+export SOURCE_DATE_EPOCH=1589816277
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/slurm
 cp %{_builddir}/slurm-slurm-19-05-5-1/COPYING %{buildroot}/usr/share/package-licenses/slurm/608c387fae8e4df19a3b54a0af077713eb442273
