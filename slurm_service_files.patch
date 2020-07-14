@@ -1,5 +1,7 @@
---- a/etc/slurmctld.service.in-org	2019-11-14 13:43:23.000000000 -0800
-+++ b/etc/slurmctld.service.in	2019-12-07 07:26:46.131434507 -0800
+diff --git a/etc/slurmctld.service.in b/etc/slurmctld.service.in
+index 6f175ad..521f3ef 100644
+--- a/etc/slurmctld.service.in
++++ b/etc/slurmctld.service.in
 @@ -1,14 +1,14 @@
  [Unit]
  Description=Slurm controller daemon
@@ -17,8 +19,31 @@
  LimitNOFILE=65536
  @SYSTEMD_TASKSMAX_OPTION@
  
---- a/etc/slurmdbd.service.in-org	2019-11-14 13:43:23.000000000 -0800
-+++ b/etc/slurmdbd.service.in	2019-12-07 07:26:32.771435027 -0800
+diff --git a/etc/slurmd.service.in b/etc/slurmd.service.in
+index f86fcd8..939d4c8 100644
+--- a/etc/slurmd.service.in
++++ b/etc/slurmd.service.in
+@@ -1,14 +1,14 @@
+ [Unit]
+ Description=Slurm node daemon
+ After=munge.service network.target remote-fs.target
+-#ConditionPathExists=@sysconfdir@/slurm.conf
+ 
+ [Service]
+ Type=forking
++User=root
+ EnvironmentFile=-/etc/sysconfig/slurmd
+ ExecStart=@sbindir@/slurmd $SLURMD_OPTIONS
+ ExecReload=/bin/kill -HUP $MAINPID
+-PIDFile=/var/run/slurmd.pid
++PIDFile=/run/slurm/slurmd.pid
+ KillMode=process
+ LimitNOFILE=131072
+ LimitMEMLOCK=infinity
+diff --git a/etc/slurmdbd.service.in b/etc/slurmdbd.service.in
+index c80feb9..17ec414 100644
+--- a/etc/slurmdbd.service.in
++++ b/etc/slurmdbd.service.in
 @@ -1,14 +1,13 @@
  [Unit]
  Description=Slurm DBD accounting daemon
@@ -35,22 +60,3 @@
  LimitNOFILE=65536
  @SYSTEMD_TASKSMAX_OPTION@
  
---- a/etc/slurmd.service.in-org	2019-11-14 13:43:23.000000000 -0800
-+++ b/etc/slurmd.service.in	2019-12-07 07:27:00.555433944 -0800
-@@ -1,14 +1,14 @@
- [Unit]
- Description=Slurm node daemon
- After=munge.service network.target remote-fs.target
--ConditionPathExists=@sysconfdir@/slurm.conf
- 
- [Service]
- Type=forking
-+User=root
- EnvironmentFile=-/etc/sysconfig/slurmd
- ExecStart=@sbindir@/slurmd $SLURMD_OPTIONS
- ExecReload=/bin/kill -HUP $MAINPID
--PIDFile=/var/run/slurmd.pid
-+PIDFile=/run/slurm/slurmd.pid
- KillMode=process
- LimitNOFILE=131072
- LimitMEMLOCK=infinity

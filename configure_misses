@@ -1,4 +1,5 @@
 Configure miss: whether to include rpath in build
+Configure miss: x86_64-clr-linux-gnu-objcopy
 Configure miss: library containing kstat_open
 Configure miss: socket.h usability
 Configure miss: socket.h presence
@@ -31,12 +32,18 @@ Configure miss: nvml.h usability
 Configure miss: nvml.h presence
 Configure miss: nvml.h
 Configure miss: nvmlInit in -lnvidia-ml
+Configure miss: rocm_smi.h usability
+Configure miss: rocm_smi.h presence
+Configure miss: rocm_smi.h
+Configure miss: rsmi_init in -lrocm_smi64
+Configure miss: rsmi_dev_drm_render_minor_get in -lrocm_smi64
 Configure miss: whether or not developer options are enabled
 Configure miss: whether memory leak debugging is enabled
 Configure miss: whether to enable slurmd operation on a front-end
 Configure miss: whether debugger partial attach enabled
 Configure miss: whether salloc should kill child processes at job termination
 Configure miss: whether to disable salloc execution in the background
+Configure miss: whether to compile slurmrestd
 Configure miss: whether man2html is available... checking for man2html
 Configure miss: whether to enable multiple-slurmd support
 Configure miss: whether deprecated options are enabled

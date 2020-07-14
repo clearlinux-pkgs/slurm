@@ -1,19 +1,21 @@
 # This file contains additional build requirements that did not get
 # picked up automatically. One name per line, no whitespace.
-readline-dev
+curl-dev
+freeipmi-dev
+glib-dev
+gtk+-dev
 hdf5-dev
 hwloc-dev
-gtk+-dev
-curl-dev
+json-c-dev
+lua-dev
+lz4-dev
+munge-dev
+ncurses-dev
+nghttp2-dev
+numactl-dev
+openssl-dev
 pmix-dev
+readline-dev
 rrdtool-dev
 systemd-dev
-freeipmi-dev
-numactl-dev
-json-c-dev
-munge-dev
-nghttp2-dev
-systemd-dev
-lua-dev
-openssl-dev
-lz4-dev
+zlib-dev
