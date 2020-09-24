@@ -4,7 +4,7 @@
 #
 Name     : slurm
 Version  : 20.02.3.1
-Release  : 7
+Release  : 8
 URL      : https://github.com/SchedMD/slurm/archive/slurm-20-02-3-1/slurm-20.02.3.1.tar.gz
 Source0  : https://github.com/SchedMD/slurm/archive/slurm-20-02-3-1/slurm-20.02.3.1.tar.gz
 Source1  : slurm.conf
