@@ -1,2 +1,0 @@
-export CFLAGS="$CFLAGS  -Wl,-z,lazy -fcommon"
-export CXXFLAGS="$CXXFLAGS -Wl,-z,lazy -fcommon"

@@ -8,8 +8,3 @@ mkdir -p %{buildroot}/usr/share/defaults/slurm
 install -m 0644 -p etc/slurm.conf.example %{buildroot}/usr/share/defaults/slurm
 install -m 0644 -p etc/slurmdbd.conf.example %{buildroot}/usr/share/defaults/slurm
 install -m 0644 -p etc/cgroup.conf.example %{buildroot}/usr/share/defaults/slurm
-
-mkdir -p %{buildroot}/usr/share/defaults/slurm/layouts.d
-install -m 0644 -p etc/layouts.d.power.conf.example %{buildroot}/usr/share/defaults/slurm/layouts.d
-install -m 0644 -p etc/layouts.d.power_cpufreq.conf.example %{buildroot}/usr/share/defaults/slurm/layouts.d
-install -m 0644 -p etc/layouts.d.unit.conf.example %{buildroot}/usr/share/defaults/slurm/layouts.d

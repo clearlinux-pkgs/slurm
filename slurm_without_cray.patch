@@ -1,25 +1,10 @@
 diff --git a/contribs/Makefile.am b/contribs/Makefile.am
-index feea781..3e85a1f 100644
+index 3f6fac0..6c466b4 100644
 --- a/contribs/Makefile.am
 +++ b/contribs/Makefile.am
-@@ -1,4 +1,4 @@
+@@ -1 +1 @@
 -SUBDIRS = cray lua mic nss_slurm openlava pam pam_slurm_adopt perlapi pmi pmi2 seff sgather sgi sjobexit torque
 +SUBDIRS = lua mic nss_slurm openlava pam pam_slurm_adopt perlapi pmi pmi2 seff sgather sgi sjobexit torque
- 
- EXTRA_DIST = \
- 	make-3.81.slurm.patch	\
-diff --git a/src/plugins/acct_gather_energy/Makefile.am b/src/plugins/acct_gather_energy/Makefile.am
-index 9378080..2abce6e 100644
---- a/src/plugins/acct_gather_energy/Makefile.am
-+++ b/src/plugins/acct_gather_energy/Makefile.am
-@@ -1,6 +1,6 @@
- # Makefile for accounting gather energy plugins
- 
--SUBDIRS = cray_aries rapl ibmaem ipmi none xcc
-+SUBDIRS = rapl ibmaem ipmi none xcc
- 
- if BUILD_RSMI
- SUBDIRS += rsmi
 diff --git a/src/plugins/core_spec/Makefile.am b/src/plugins/core_spec/Makefile.am
 index 44b1ed6..f06bc54 100644
 --- a/src/plugins/core_spec/Makefile.am
@@ -69,7 +54,7 @@ index ccde44c..c617174 100644
 -SUBDIRS = common cray_aries none
 +SUBDIRS = common none
 diff --git a/src/plugins/select/Makefile.am b/src/plugins/select/Makefile.am
-index 7460648..bebf728 100644
+index 38bae0f..ca7133f 100644
 --- a/src/plugins/select/Makefile.am
 +++ b/src/plugins/select/Makefile.am
 @@ -1,7 +1,7 @@
@@ -79,29 +64,29 @@ index 7460648..bebf728 100644
 -SUBDIRS = other cons_common cons_res cons_tres cray_aries linear
 +SUBDIRS = other cons_common cons_res cons_tres linear
  
- # Each plugin here needs a plugin_id, here are the currect plug_ids
- # for each plugin.
+ # Each plugin here needs a plugin_id.
+ # Here are the current plugin_ids for each plugin.
 diff --git a/src/plugins/switch/Makefile.am b/src/plugins/switch/Makefile.am
-index c58f513..39a2b3e 100644
+index 365f5b8..dc56a01 100644
 --- a/src/plugins/switch/Makefile.am
 +++ b/src/plugins/switch/Makefile.am
 @@ -1,7 +1,3 @@
  # Makefile for switch plugins
  
- SUBDIRS = generic none
+ SUBDIRS = none
 -
 -if WITH_SWITCH_CRAY_ARIES
 -SUBDIRS += cray_aries
 -endif
 diff --git a/src/plugins/task/Makefile.am b/src/plugins/task/Makefile.am
-index 8d2a36e..607af1c 100644
+index f79282f..356cdcd 100644
 --- a/src/plugins/task/Makefile.am
 +++ b/src/plugins/task/Makefile.am
 @@ -1,6 +1,6 @@
  # Makefile for task plugins
  
--SUBDIRS = cray_aries none
-+SUBDIRS = none
+-SUBDIRS = affinity cray_aries none
++SUBDIRS = affinity none
  
- if HAVE_SCHED_SETAFFINITY
- SUBDIRS += affinity
+ if WITH_CGROUP
+ SUBDIRS += cgroup

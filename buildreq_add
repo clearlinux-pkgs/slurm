@@ -1,6 +1,8 @@
 # This file contains additional build requirements that did not get
 # picked up automatically. One name per line, no whitespace.
 curl-dev
+dejagnu
+expect
 freeipmi-dev
 glib-dev
 gtk+-dev
@@ -18,4 +20,5 @@ pmix-dev
 readline-dev
 rrdtool-dev
 systemd-dev
+tcl
 zlib-dev

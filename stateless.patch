@@ -1,8 +1,8 @@
 diff --git a/src/common/read_config.c b/src/common/read_config.c
-index 492109f..8446488 100644
+index d0b3ed1..bf63419 100644
 --- a/src/common/read_config.c
 +++ b/src/common/read_config.c
-@@ -3069,8 +3069,15 @@ static int _init_slurm_conf(const char *file_name)
+@@ -3110,8 +3110,15 @@ static int _init_slurm_conf(const char *file_name)
  
  	if (name == NULL) {
  		name = getenv("SLURM_CONF");
@@ -19,7 +19,7 @@ index 492109f..8446488 100644
  	}
  	if (conf_initialized)
  		error("the conf_hashtbl is already inited");
-@@ -5825,8 +5832,15 @@ extern char *get_extra_conf_path(char *conf_name)
+@@ -5887,8 +5894,15 @@ extern char *get_extra_conf_path(char *conf_name)
  	char *val = getenv("SLURM_CONF");
  	char *rc = NULL, *slash;
  

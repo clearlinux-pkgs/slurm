@@ -1,62 +1,44 @@
 diff --git a/etc/slurmctld.service.in b/etc/slurmctld.service.in
-index 6f175ad..521f3ef 100644
+index d0384fa..b256a1e 100644
 --- a/etc/slurmctld.service.in
 +++ b/etc/slurmctld.service.in
-@@ -1,14 +1,14 @@
+@@ -1,10 +1,10 @@
  [Unit]
  Description=Slurm controller daemon
  After=network.target munge.service
 -ConditionPathExists=@sysconfdir@/slurm.conf
  
  [Service]
- Type=forking
+ Type=simple
 +User=root
  EnvironmentFile=-/etc/sysconfig/slurmctld
- ExecStart=@sbindir@/slurmctld $SLURMCTLD_OPTIONS
+ ExecStart=@sbindir@/slurmctld -D $SLURMCTLD_OPTIONS
  ExecReload=/bin/kill -HUP $MAINPID
--PIDFile=/var/run/slurmctld.pid
-+PIDFile=/run/slurm/slurmctld.pid
- LimitNOFILE=65536
- @SYSTEMD_TASKSMAX_OPTION@
- 
 diff --git a/etc/slurmd.service.in b/etc/slurmd.service.in
-index f86fcd8..939d4c8 100644
+index b95d31d..b381652 100644
 --- a/etc/slurmd.service.in
 +++ b/etc/slurmd.service.in
-@@ -1,14 +1,14 @@
+@@ -1,10 +1,10 @@
  [Unit]
  Description=Slurm node daemon
  After=munge.service network.target remote-fs.target
 -#ConditionPathExists=@sysconfdir@/slurm.conf
  
  [Service]
- Type=forking
+ Type=simple
 +User=root
  EnvironmentFile=-/etc/sysconfig/slurmd
- ExecStart=@sbindir@/slurmd $SLURMD_OPTIONS
+ ExecStart=@sbindir@/slurmd -D $SLURMD_OPTIONS
  ExecReload=/bin/kill -HUP $MAINPID
--PIDFile=/var/run/slurmd.pid
-+PIDFile=/run/slurm/slurmd.pid
- KillMode=process
- LimitNOFILE=131072
- LimitMEMLOCK=infinity
 diff --git a/etc/slurmdbd.service.in b/etc/slurmdbd.service.in
-index c80feb9..17ec414 100644
+index 9773aa1..718b6b3 100644
 --- a/etc/slurmdbd.service.in
 +++ b/etc/slurmdbd.service.in
-@@ -1,14 +1,13 @@
+@@ -1,7 +1,6 @@
  [Unit]
  Description=Slurm DBD accounting daemon
  After=network.target munge.service
 -ConditionPathExists=@sysconfdir@/slurmdbd.conf
  
  [Service]
- Type=forking
- EnvironmentFile=-/etc/sysconfig/slurmdbd
- ExecStart=@sbindir@/slurmdbd $SLURMDBD_OPTIONS
- ExecReload=/bin/kill -HUP $MAINPID
--PIDFile=/var/run/slurmdbd.pid
-+PIDFile=/run/slurm/slurmdbd.pid
- LimitNOFILE=65536
- @SYSTEMD_TASKSMAX_OPTION@
- 
+ Type=simple
