@@ -1,6 +1,13 @@
 This file describes changes in recent versions of Slurm. It primarily
 documents those changes that are of interest to users and administrators.
 
+* Changes in Slurm 20.11.2
+==========================
+ -- Fix older versions of sacct not working with 20.11.
+ -- Fix slurmctld crash when using a pre-20.11 srun in a job allocation.
+ -- Correct logic problem in _validate_user_access.
+ -- Fix libpmi to initialize Slurm configuration correctly.
+
 * Changes in Slurm 20.11.1
 ==========================
  -- Fix spelling of "overcomited" to "overcomitted" in sreport's cluster
