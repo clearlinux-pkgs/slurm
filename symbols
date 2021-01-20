@@ -682,6 +682,7 @@ libslurm.so.36:slurm_priority_init
 libslurm.so.36:slurm_private_data_string
 libslurm.so.36:slurm_process_option
 libslurm.so.36:slurm_process_option_data
+libslurm.so.36:slurm_process_option_or_exit
 libslurm.so.36:slurm_pull_trigger
 libslurm.so.36:slurm_read_hostfile
 libslurm.so.36:slurm_read_stream
