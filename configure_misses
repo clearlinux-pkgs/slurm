@@ -11,6 +11,7 @@ Configure miss: kstat.h
 Configure miss: library containing dlopen... checking for dlopen in -l
 Configure miss: ptrace64
 Configure miss: whether sbatch --get-user-env option should load .login
+Configure miss: gcc options needed to detect all undeclared functions
 Configure miss: whether strerror_r returns char *
 Configure miss: sysctlbyname
 Configure miss: whether hstrerror is declared
