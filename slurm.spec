@@ -4,7 +4,7 @@
 #
 Name     : slurm
 Version  : 20.11.4.1
-Release  : 12
+Release  : 13
 URL      : https://github.com/SchedMD/slurm/archive/slurm-20-11-4-1/slurm-20.11.4.1.tar.gz
 Source0  : https://github.com/SchedMD/slurm/archive/slurm-20-11-4-1/slurm-20.11.4.1.tar.gz
 Source1  : slurm.conf
@@ -161,7 +161,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1613781403
+export SOURCE_DATE_EPOCH=1615418139
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
@@ -185,7 +185,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1613781403
+export SOURCE_DATE_EPOCH=1615418139
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/slurm
 cp %{_builddir}/slurm-slurm-20-11-4-1/COPYING %{buildroot}/usr/share/package-licenses/slurm/608c387fae8e4df19a3b54a0af077713eb442273

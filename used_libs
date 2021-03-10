@@ -13,7 +13,7 @@ libhdf5_hl.so.100
 libhwloc.so.15
 libipmimonitoring.so.6
 libjson-c.so.4
-liblua.so.5.3
+liblua.so.5.4
 liblz4.so.1
 libm.so.6
 libmariadb.so.3
