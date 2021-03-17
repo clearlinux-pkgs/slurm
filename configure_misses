@@ -1,34 +1,34 @@
-Configure miss: whether to include rpath in build
+Configure miss: System dimensions
 Configure miss: g++ option to enable C++11 features
-Configure miss: x86_64-clr-linux-gnu-objcopy
-Configure miss: library containing kstat_open
-Configure miss: socket.h
-Configure miss: sysint.h
-Configure miss: sys/systemcfg.h
-Configure miss: sys/dr.h
-Configure miss: pam/pam_appl.h
+Configure miss: gcc options needed to detect all undeclared functions
 Configure miss: kstat.h
 Configure miss: library containing dlopen... checking for dlopen in -l
-Configure miss: ptrace64
-Configure miss: whether sbatch --get-user-env option should load .login
-Configure miss: gcc options needed to detect all undeclared functions
-Configure miss: whether strerror_r returns char *
-Configure miss: sysctlbyname
-Configure miss: whether hstrerror is declared
-Configure miss: whether sys_siglist is declared
-Configure miss: System dimensions
+Configure miss: library containing kstat_open
 Configure miss: nvml.h
 Configure miss: nvmlInit in -lnvidia-ml
+Configure miss: pam/pam_appl.h
+Configure miss: ptrace64
 Configure miss: rocm_smi/rocm_smi.h
-Configure miss: rsmi_init in -lrocm_smi64
 Configure miss: rsmi_dev_drm_render_minor_get in -lrocm_smi64
-Configure miss: whether or not developer options are enabled
-Configure miss: whether memory leak debugging is enabled
-Configure miss: whether to enable slurmd operation on a front-end
+Configure miss: rsmi_init in -lrocm_smi64
+Configure miss: socket.h
+Configure miss: sys/dr.h
+Configure miss: sys/systemcfg.h
+Configure miss: sysctlbyname
+Configure miss: sysint.h
 Configure miss: whether debugger partial attach enabled
-Configure miss: whether salloc should kill child processes at job termination
-Configure miss: whether to disable salloc execution in the background
-Configure miss: whether to compile slurmrestd
-Configure miss: whether man2html is available... checking for man2html
-Configure miss: whether to enable multiple-slurmd support
 Configure miss: whether deprecated options are enabled
+Configure miss: whether hstrerror is declared
+Configure miss: whether man2html is available... checking for man2html
+Configure miss: whether memory leak debugging is enabled
+Configure miss: whether or not developer options are enabled
+Configure miss: whether salloc should kill child processes at job termination
+Configure miss: whether sbatch --get-user-env option should load .login
+Configure miss: whether strerror_r returns char *
+Configure miss: whether sys_siglist is declared
+Configure miss: whether to compile slurmrestd
+Configure miss: whether to disable salloc execution in the background
+Configure miss: whether to enable multiple-slurmd support
+Configure miss: whether to enable slurmd operation on a front-end
+Configure miss: whether to include rpath in build
+Configure miss: x86_64-clr-linux-gnu-objcopy

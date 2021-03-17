@@ -812,6 +812,7 @@ libslurm.so.36:slurm_stepd_add_extern_pid
 libslurm.so.36:slurm_stepd_available
 libslurm.so.36:slurm_stepd_connect
 libslurm.so.36:slurm_stepd_get_info
+libslurm.so.36:slurm_stepd_get_namespace_fd
 libslurm.so.36:slurm_stepd_get_uid
 libslurm.so.36:slurm_stepd_get_x11_display
 libslurm.so.36:slurm_stepd_getgr

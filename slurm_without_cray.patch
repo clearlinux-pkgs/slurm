@@ -15,14 +15,14 @@ index 44b1ed6..f06bc54 100644
 -SUBDIRS = cray_aries none
 +SUBDIRS = none
 diff --git a/src/plugins/job_container/Makefile.am b/src/plugins/job_container/Makefile.am
-index 8e1960a..529a9d5 100644
+index 1075192..5f1fc89 100644
 --- a/src/plugins/job_container/Makefile.am
 +++ b/src/plugins/job_container/Makefile.am
 @@ -1,3 +1,3 @@
  # Makefile for job_container plugins
  
--SUBDIRS = cncu none
-+SUBDIRS = none
+-SUBDIRS = cncu none tmpfs
++SUBDIRS = none tmpfs
 diff --git a/src/plugins/job_submit/Makefile.am b/src/plugins/job_submit/Makefile.am
 index e393bcf..b98cf2e 100644
 --- a/src/plugins/job_submit/Makefile.am
