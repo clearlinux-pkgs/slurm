@@ -13,6 +13,7 @@ Configure miss: rsmi_dev_drm_render_minor_get in -lrocm_smi64
 Configure miss: rsmi_init in -lrocm_smi64
 Configure miss: socket.h
 Configure miss: sys/dr.h
+Configure miss: sys/sysctl.h
 Configure miss: sys/systemcfg.h
 Configure miss: sysctlbyname
 Configure miss: sysint.h
