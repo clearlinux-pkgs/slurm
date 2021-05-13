@@ -1,6 +1,25 @@
 This file describes changes in recent versions of Slurm. It primarily
 documents those changes that are of interest to users and administrators.
 
+* Changes in Slurm 20.11.7
+==========================
+ -- slurmd - handle configless failures gracefully instead of hanging
+    indefinitely.
+ -- select/cons_tres - fix Dragonfly topology not selecting nodes in the same
+    leaf switch when it should as well as requests with --switches option.
+ -- Fix issue where certain step requests wouldn't run if the first node in the
+    job allocation was full and there were idle resources on other nodes in
+    the job allocation.
+ -- Fix deadlock issue with <Prolog|Epilog>Slurmctld.
+ -- torque/qstat - fix printf error message in output.
+ -- When adding associations or wckeys avoid checking multiple times a user or
+    cluster name.
+ -- Fix wrong jobacctgather information on a step on multiple nodes
+    due to timeouts sending its the information gathered on its node.
+ -- Fix missing xstrdup which could result in slurmctld segfault on array jobs.
+ -- Fix security issue in PrologSlurmctld and EpilogSlurmctld by always
+    prepending SPANK_ to all user-set environment variables. CVE-2021-31215.
+
 * Changes in Slurm 20.11.6
 ==========================
  -- Fix sacct assert with the --qos option.
@@ -428,6 +447,9 @@ documents those changes that are of interest to users and administrators.
  -- Add --ntasks-per-gpu option.
  -- Add --gpu-bind=single option.
 
+* Changes in Slurm 20.02.8
+==========================
+
 * Changes in Slurm 20.02.7
 ==========================
  -- cons_tres - Fix DefCpuPerGPU
@@ -435,6 +457,9 @@ documents those changes that are of interest to users and administrators.
  -- Fix false positive oom-kill events on extern step termination when
     jobacct_gather/cgroup configured.
  -- Ensure SPANK prolog and epilog run without an explicit PlugStackConfig.
+ -- Fix missing xstrdup which could result in slurmctld segfault on array jobs.
+ -- Fix security issue in PrologSlurmctld and EpilogSlurmctld by always
+    prepending SPANK_ to all user-set environment variables. CVE-2021-31215.
 
 * Changes in Slurm 20.02.6
 ==========================
