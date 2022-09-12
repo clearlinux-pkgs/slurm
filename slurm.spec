@@ -4,7 +4,7 @@
 #
 Name     : slurm
 Version  : 20.11.8.1
-Release  : 17
+Release  : 18
 URL      : https://github.com/SchedMD/slurm/archive/slurm-20-11-8-1/slurm-20.11.8.1.tar.gz
 Source0  : https://github.com/SchedMD/slurm/archive/slurm-20-11-8-1/slurm-20.11.8.1.tar.gz
 Source1  : slurm.conf
